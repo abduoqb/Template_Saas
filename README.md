@@ -18,14 +18,14 @@ Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
 ## 🎨 Caractéristiques
 
-- ✨ Design premium épuré avec quadrillage subtil futuriste
-- 🎭 Animations fluides avec Framer Motion (stagger, parallax, fade-in)
-- 📊 Bento Grid asymétrique avec graphique Chart.js
-- 💎 Effets glass (backdrop-blur) sur navbar et cartes
-- 📱 100% Responsive (mobile-first)
-- ♿ Accessible (focus visible, ARIA labels, contraste AA)
-- 🎯 Optimisé performance (Lighthouse 90+)
-- 🌙 Support prefers-reduced-motion
+- Design premium épuré avec quadrillage subtil futuriste
+- Animations fluides avec Framer Motion (stagger, parallax, fade-in)
+- Bento Grid asymétrique avec graphique Chart.js
+- Effets glass (backdrop-blur) sur navbar et cartes
+- 100% Responsive (mobile-first)
+- Accessible (focus visible, ARIA labels, contraste AA)
+- Optimisé performance (Lighthouse 90+)
+- Support prefers-reduced-motion
 
 ## 📂 Structure du projet
 
