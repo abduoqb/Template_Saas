@@ -60,7 +60,7 @@ export function Pricing() {
 
             <div className="text-center pt-6 pb-8 border-b border-gray-200">
               <h3 className="text-2xl font-bold text-text-primary mb-4">
-                Offre Unique
+                Pack Premium All-Inclusive
               </h3>
 
               <div className="flex items-baseline justify-center gap-2 mb-2">
@@ -70,7 +70,10 @@ export function Pricing() {
               </div>
 
               <p className="text-text-secondary">
-                Pack complet clé en main, hébergement 1 an inclus
+                Votre site professionnel clé en main
+              </p>
+              <p className="text-sm text-green-600 font-semibold mt-2">
+                Économisez 800€ vs. agences traditionnelles
               </p>
             </div>
 
@@ -99,8 +102,8 @@ export function Pricing() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/demarrer-projet">
-                  <Button variant="primary" size="lg" className="flex-1 group">
+                <Link href="/demarrer-projet" className="flex-1">
+                  <Button variant="primary" size="lg" className="w-full group">
                     Démarrer mon projet
                     <ArrowRight
                       size={20}
@@ -108,10 +111,13 @@ export function Pricing() {
                     />
                   </Button>
                 </Link>
-                <Link href="/projets">
-                  <Button variant="glass" size="lg" className="flex-1">
-                    <Phone size={20} />
-                    Demander un appel
+                <Link href="/offre" className="flex-1">
+                  <Button variant="glass" size="lg" className="w-full group">
+                    <ArrowRight
+                      size={20}
+                      className="transition-transform duration-micro group-hover:translate-x-1"
+                    />
+                    Découvrir l'offre
                   </Button>
                 </Link>
               </div>

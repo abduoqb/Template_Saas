@@ -39,16 +39,15 @@ export const CLIENT_LOGOS = [
   { name: 'FutureWorks', logo: '/images/logos/futureworks.svg' },
 ]
 
-// Pricing features
+// Pricing features - Pack Premium All-Inclusive
 export const PRICING_FEATURES = [
-  'Site sur-mesure illimité',
-  'Design premium personnalisé',
-  'SEO avancé + Analytics',
-  'Blog & CMS intégrés',
-  'E-commerce (jusqu\'à 50 produits)',
-  'Intégrations API courantes',
-  'Support prioritaire 90 jours',
-  'Formation de prise en main',
+  'Site 100% sur-mesure avec pages illimitées + design premium responsive',
+  'Hébergement premium 1 AN OFFERT (valeur 120€) + nom de domaine inclus',
+  'SEO Pro intégré - Soyez 1er sur Google dès le lancement',
+  'Blog & CMS professionnel + formulaires intelligents + espace client',
+  'Support VIP 90 jours avec réponse en moins de 24h',
+  'Garantie satisfait ou remboursé 30 jours + livraison 21 jours max',
+  'BONUS : Logo professionnel + 10 visuels réseaux sociaux + guide SEO (valeur 300€)',
 ]
 
 // Navigation links
