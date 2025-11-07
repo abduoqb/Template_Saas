@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Sparkles, ArrowRight, Mail } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import { Sparkles, ArrowRight, Play } from 'lucide-react'
+import { Button, Container, Section } from '@/components/ui'
 import { Badge } from '@/components/ui/Badge'
 
 const containerVariants = {
@@ -31,17 +31,28 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Decorative blurred orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary-blue/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-violet/10 rounded-full blur-3xl" />
-
       <motion.div
-        className="relative z-10 max-w-5xl mx-auto text-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+        className="absolute top-20 left-10 w-72 h-72 bg-primary-blue/10 rounded-full blur-3xl"
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.4, delay: 0.2, ease: 'easeOut' }}
+        className="absolute bottom-20 right-10 w-96 h-96 bg-primary-violet/10 rounded-full blur-3xl"
+      />
+
+      <Container>
+        <motion.div
+          className="relative z-10 max-w-5xl mx-auto text-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
         {/* Badge */}
         <motion.div variants={itemVariants} className="flex justify-center mb-6">
           <Badge variant="default" icon={<Sparkles size={16} />}>
@@ -81,10 +92,10 @@ export function Hero() {
               />
             </Button>
           </Link>
-          <Link href="/projets">
+          <Link href="#demo">
             <Button variant="glass" size="lg" className="group min-w-[200px]">
-              <Mail size={20} />
-              Me contacter
+              <Play size={20} className="transition-transform duration-micro group-hover:scale-110" />
+              Démo interactive
             </Button>
           </Link>
         </motion.div>
@@ -96,7 +107,7 @@ export function Hero() {
         >
           {[
             { value: '50+', label: 'Projets réalisés' },
-            { value: '100%', label: 'Clients satisfaits' },
+            { value: '99%', label: 'Clients satisfaits' },
             { value: '24/7', label: 'Support disponible' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
@@ -106,6 +117,23 @@ export function Hero() {
               <div className="text-sm text-text-secondary">{stat.label}</div>
             </div>
           ))}
+        </motion.div>
+        </motion.div>
+      </Container>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-text-tertiary p-1"
+        >
+          <motion.div className="h-1.5 w-1.5 rounded-full bg-text-tertiary" />
         </motion.div>
       </motion.div>
     </section>
