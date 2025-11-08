@@ -31,30 +31,30 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20">
       {/* Decorative blurred orbs */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
-        className="absolute top-20 left-10 w-72 h-72 bg-primary-blue/10 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-primary-blue/10 rounded-full blur-3xl"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.4, delay: 0.2, ease: 'easeOut' }}
-        className="absolute bottom-20 right-10 w-96 h-96 bg-primary-violet/10 rounded-full blur-3xl"
+        className="absolute bottom-20 right-10 w-64 h-64 md:w-96 md:h-96 bg-primary-violet/10 rounded-full blur-3xl"
       />
 
       <Container>
         <motion.div
-          className="relative z-10 max-w-5xl mx-auto text-center"
+          className="relative z-10 max-w-5xl mx-auto text-center px-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
         {/* Badge */}
-        <motion.div variants={itemVariants} className="flex justify-center mb-6">
+        <motion.div variants={itemVariants} className="flex justify-center mb-6 md:mb-6">
           <Badge variant="default" icon={<Sparkles size={16} />}>
             Disponible pour nouveaux projets
           </Badge>
@@ -63,7 +63,7 @@ export function Hero() {
         {/* Main Title */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold tracking-tighter text-text-primary mb-6"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-text-primary mb-4 md:mb-6 leading-tight"
         >
           Créons quelque chose{' '}
           <span className="text-gradient">d&apos;extraordinaire</span>
@@ -72,7 +72,7 @@ export function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-base md:text-lg lg:text-xl text-text-secondary max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed px-4"
         >
           Transformons ensemble vos idées en expériences digitales uniques et mémorables qui
           marquent les esprits et propulsent votre activité.
@@ -81,10 +81,10 @@ export function Hero() {
         {/* CTAs */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4"
         >
           <Link href="/projets">
-            <Button variant="primary" size="lg" className="group min-w-[200px]">
+            <Button variant="primary" size="lg" className="group w-full sm:w-auto sm:min-w-[200px]">
               Voir mes projets
               <ArrowRight
                 size={20}
@@ -93,7 +93,7 @@ export function Hero() {
             </Button>
           </Link>
           <Link href="#demo">
-            <Button variant="glass" size="lg" className="group min-w-[200px]">
+            <Button variant="glass" size="lg" className="group w-full sm:w-auto sm:min-w-[200px]">
               <Play size={20} className="transition-transform duration-micro group-hover:scale-110" />
               Démo interactive
             </Button>
@@ -103,7 +103,7 @@ export function Hero() {
         {/* Stats or features (optional) */}
         <motion.div
           variants={itemVariants}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
+          className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto px-4"
         >
           {[
             { value: '50+', label: 'Projets réalisés' },
@@ -111,10 +111,10 @@ export function Hero() {
             { value: '24/7', label: 'Support disponible' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient mb-1 md:mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-text-secondary">{stat.label}</div>
+              <div className="text-xs md:text-sm text-text-secondary">{stat.label}</div>
             </div>
           ))}
         </motion.div>
