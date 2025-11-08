@@ -14,15 +14,15 @@ const socialIcons = {
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 pt-16 pb-8 px-6">
+    <footer className="bg-white border-t border-gray-200 pt-8 md:pt-16 pb-6 md:pb-8 px-6">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-text-primary mb-4">
+            <h3 className="text-xl md:text-2xl font-bold text-text-primary mb-3 md:mb-4">
               Portfolio<span className="text-gradient">.</span>
             </h3>
-            <p className="text-text-secondary text-sm mb-6 leading-relaxed">
+            <p className="text-text-secondary text-sm mb-4 md:mb-6 leading-relaxed">
               Créateur d&apos;expériences digitales uniques et mémorables. Transformons ensemble
               vos idées en réalité.
             </p>
@@ -46,8 +46,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Product Links */}
-          <div>
+          {/* Product Links - Hidden on mobile */}
+          <div className="hidden md:block">
             <h4 className="font-semibold text-text-primary mb-4">Produit</h4>
             <ul className="space-y-3">
               {FOOTER_LINKS.product.map((link) => (
@@ -63,8 +63,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company Links */}
-          <div>
+          {/* Company Links - Hidden on mobile */}
+          <div className="hidden md:block">
             <h4 className="font-semibold text-text-primary mb-4">Entreprise</h4>
             <ul className="space-y-3">
               {FOOTER_LINKS.company.map((link) => (
@@ -80,8 +80,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Support Links */}
-          <div>
+          {/* Support Links - Hidden on mobile */}
+          <div className="hidden md:block">
             <h4 className="font-semibold text-text-primary mb-4">Support</h4>
             <ul className="space-y-3">
               {FOOTER_LINKS.support.map((link) => (
@@ -97,8 +97,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal Links */}
-          <div>
+          {/* Legal Links - Hidden on mobile */}
+          <div className="hidden md:block">
             <h4 className="font-semibold text-text-primary mb-4">Légal</h4>
             <ul className="space-y-3">
               {FOOTER_LINKS.legal.map((link) => (
@@ -115,8 +115,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="max-w-md mx-auto text-center mb-12">
+        {/* Newsletter - Hidden on mobile */}
+        <div className="hidden md:block max-w-md mx-auto text-center mb-12">
           <h4 className="font-semibold text-text-primary mb-2">Restez informé</h4>
           <p className="text-sm text-text-secondary mb-4">
             Recevez les dernières actualités et conseils directement dans votre boîte mail
@@ -135,22 +135,22 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-text-secondary">
+        <div className="border-t border-gray-200 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+          <p className="text-xs md:text-sm text-text-secondary text-center md:text-left">
             © 2025 Portfolio. Créé avec ❤️ par votre développeur.
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-4 md:gap-6 flex-wrap justify-center">
             <a
               href="#mentions"
-              className="text-sm text-text-secondary hover:text-text-primary hover:underline"
+              className="text-xs md:text-sm text-text-secondary hover:text-text-primary hover:underline"
             >
               Mentions légales
             </a>
             <a
               href="#privacy"
-              className="text-sm text-text-secondary hover:text-text-primary hover:underline"
+              className="text-xs md:text-sm text-text-secondary hover:text-text-primary hover:underline"
             >
-              Politique de confidentialité
+              Confidentialité
             </a>
           </div>
         </div>
