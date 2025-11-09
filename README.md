@@ -8,10 +8,12 @@ Site portfolio/SaaS ultra premium avec Next.js 14, Tailwind CSS et animations op
 
 | Métrique | Mobile | Desktop |
 |----------|--------|---------|
-| **Performance** | 🟢 99-100 | 🟢 100 |
-| **Accessibilité** | 🟢 96-100 | 🟢 96-100 |
+| **Performance** | 🟢 99 | 🟢 100 |
+| **Accessibilité** | 🟢 100 | 🟢 100 |
 | **Bonnes pratiques** | 🟢 100 | 🟢 100 |
 | **SEO** | 🟢 100 | 🟢 100 |
+
+https://pagespeed.web.dev/analysis/https-site-vitrine-claude-code-vercel-app/jqo0rhrvpj?form_factor=desktop
 
 ## 🚀 Démarrage rapide
 
@@ -37,19 +39,19 @@ Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 - ✅ **Bundle optimisé** : -18% sur page d'accueil
 
 ### Design & UX
-- 🎨 Design premium épuré avec quadrillage subtil futuriste
-- 🎭 Animations équilibrées (scrollbar native, pas de surcharge)
-- 🧩 Bento Grid asymétrique avec graphiques Chart.js
-- 💎 Effets glass (backdrop-blur) sur navbar et cartes
-- 📱 100% Responsive (mobile-first)
-- ⚡ Support prefers-reduced-motion
+-  Design premium épuré avec quadrillage subtil futuriste
+-  Animations équilibrées (scrollbar native, pas de surcharge)
+-  Bento Grid asymétrique avec graphiques Chart.js
+-  Effets glass (backdrop-blur) sur navbar et cartes
+-  100% Responsive (mobile-first)
+-  Support prefers-reduced-motion
 
 ### Accessibilité WCAG AA
-- ♿ Contrastes optimisés (4.5:1+)
-- 🔍 Labels ARIA complets
-- ⌨️ Navigation clavier complète
-- 📖 Lecteurs d'écran supportés
-- 🎯 Focus visible (2px blue)
+-  Contrastes optimisés (4.5:1+)
+-  Labels ARIA complets
+-  Navigation clavier complète
+-  Lecteurs d'écran supportés
+-  Focus visible (2px blue)
 
 ## 📂 Structure du projet
 
@@ -302,7 +304,6 @@ git push origin master
 - [ ] Ajouter contenu page projets/portfolio
 - [ ] Configurer Google Analytics / Plausible
 - [ ] Ajouter sitemap.xml dynamique
-- [ ] Implémenter le mode sombre (optionnel)
 
 ## 📄 Licence
 
