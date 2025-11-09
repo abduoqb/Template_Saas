@@ -308,7 +308,3 @@ git push origin master
 ## 📄 Licence
 
 MIT
-
----
-
-**Développé avec [Claude Code](https://claude.com/claude-code)**
