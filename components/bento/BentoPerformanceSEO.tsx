@@ -33,7 +33,7 @@ export function BentoPerformanceSEO() {
             transition={{ delay: index * 0.1 }}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-text-primary">{metric.label}</span>
+              <span className="text-sm font-semibold text-text-primary">{metric.label}</span>
               <span className="text-lg font-bold text-gradient">{metric.score}</span>
             </div>
             <div className="h-2 bg-gray-200 rounded-full overflow-hidden">

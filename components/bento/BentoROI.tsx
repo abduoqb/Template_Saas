@@ -25,7 +25,7 @@ export function BentoROI() {
           transition={{ delay: 0.1 }}
         >
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-text-primary">Investissement</span>
+            <span className="text-sm font-semibold text-text-primary">Investissement</span>
             <span className="text-lg font-bold text-text-primary">1 500€</span>
           </div>
           <div className="h-2 bg-gray-200 rounded-full">
@@ -40,7 +40,7 @@ export function BentoROI() {
           transition={{ delay: 0.2 }}
         >
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-text-primary">Gains après 6 mois</span>
+            <span className="text-sm font-semibold text-text-primary">Gains après 6 mois</span>
             <span className="text-lg font-bold text-green-600">5 000€+</span>
           </div>
           <div className="h-2 bg-gray-200 rounded-full">

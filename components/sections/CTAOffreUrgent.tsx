@@ -21,54 +21,19 @@ const guarantees = [
 export function CTAOffreUrgent() {
   return (
     <section className="relative overflow-hidden px-6 py-20">
-      {/* Animated Background */}
+      {/* Static Background */}
       <div className="via-primary-purple absolute inset-0 bg-gradient-to-br from-primary-blue to-primary-blue opacity-95" />
       <div className="bg-grid-white absolute inset-0 opacity-5" />
 
-      {/* Animated Particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute h-2 w-2 rounded-full bg-white opacity-20"
-            initial={{
-              x: Math.random() * 100 + '%',
-              y: Math.random() * 100 + '%',
-            }}
-            animate={{
-              y: [null, '-100%'],
-              opacity: [0.2, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
       <div className="container relative z-10 mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-white"
-        >
+        <div className="text-center text-white animate-fade-in">
           {/* Urgency Badge */}
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/20 px-5 py-2.5 backdrop-blur-sm"
-          >
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/20 px-5 py-2.5 backdrop-blur-sm">
             <Zap size={18} className="text-yellow-300" />
             <span className="text-sm font-semibold">
               🔥 Offre limitée - Plus que 3 places disponibles en Décembre 2025
             </span>
-          </motion.div>
+          </div>
 
           {/* Main Headline */}
           <h2 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
@@ -87,31 +52,21 @@ export function CTAOffreUrgent() {
             {urgencyFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
                   className="flex items-center gap-3 rounded-card-lg border border-white/20 bg-white/10 p-4 backdrop-blur-sm"
                 >
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white/20">
                     <Icon size={20} />
                   </div>
-                  <span className="text-left text-sm font-medium">{feature.text}</span>
-                </motion.div>
+                  <span className="text-left text-sm font-semibold">{feature.text}</span>
+                </div>
               )
             })}
           </div>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="mb-12 flex flex-col justify-center gap-4 sm:flex-row"
-          >
+          <div className="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/demarrer-projet">
               <Button
                 variant="primary"
@@ -132,43 +87,25 @@ export function CTAOffreUrgent() {
                 💬 Discuter avec un expert
               </Button>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Guarantees Grid */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            className="mx-auto grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-4"
-          >
+          <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-4">
             {guarantees.map((guarantee, index) => (
               <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                 <CheckCircle2 size={18} className="flex-shrink-0 text-green-300" />
                 <span className="text-left">{guarantee}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Bottom Note */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="mt-8 text-sm text-white/70"
-          >
+          <p className="mt-8 text-sm text-white/70">
             ⏱️ Réponse sous 24h • 💰 Devis gratuit et sans engagement • 🔒 Paiement 100% sécurisé
-          </motion.p>
+          </p>
 
           {/* Urgency Timer Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-            className="mx-auto mt-12 max-w-2xl rounded-card-lg border border-white/20 bg-white/10 p-6 backdrop-blur-sm"
-          >
+          <div className="mx-auto mt-12 max-w-2xl rounded-card-lg border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
             <p className="mb-3 text-sm font-semibold">⚡ Places disponibles ce mois-ci</p>
             <div className="flex justify-center gap-2">
               <div className="h-2 w-full max-w-md overflow-hidden rounded-full bg-white/20">
@@ -184,8 +121,8 @@ export function CTAOffreUrgent() {
             <p className="mt-3 text-xs text-white/70">
               9 projets complétés ce mois • 3 places restantes
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )

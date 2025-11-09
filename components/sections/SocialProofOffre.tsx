@@ -127,7 +127,7 @@ export function SocialProofOffre() {
 
               {/* Plan Badge */}
               <div className="mt-3 text-center">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-primary-blue/10 text-primary-blue">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-blue/10 text-primary-blue">
                   {testimonial.plan}
                 </span>
               </div>

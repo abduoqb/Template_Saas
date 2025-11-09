@@ -261,7 +261,7 @@ export default function DemarrerProjetPage() {
                       name="typeProjet"
                       value={formData.typeProjet}
                       onChange={handleInputChange}
-                      className="glass w-full cursor-pointer appearance-none rounded-button border-2 border-gray-300 bg-white/60 px-4 py-3 pr-12 font-medium text-text-primary transition-colors focus:border-primary-blue focus:outline-none"
+                      className="glass w-full cursor-pointer appearance-none rounded-button border-2 border-gray-300 bg-white/60 px-4 py-3 pr-12 font-semibold text-text-primary transition-colors focus:border-primary-blue focus:outline-none"
                       required
                     >
                       <option value="" className="text-gray-400">
@@ -351,7 +351,7 @@ export default function DemarrerProjetPage() {
                       exit={{ opacity: 0 }}
                     >
                       <CheckCircle size={20} className="text-green-600" />
-                      <span className="text-sm font-medium text-green-700">{submitMessage}</span>
+                      <span className="text-sm font-semibold text-green-700">{submitMessage}</span>
                     </motion.div>
                   )}
                 </AnimatePresence>

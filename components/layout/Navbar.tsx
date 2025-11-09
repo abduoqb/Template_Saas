@@ -42,7 +42,7 @@ export function Navbar() {
             {NAV_LINKS.map((link, index) => (
               <Link key={link.href} href={link.href}>
                 <motion.div
-                  className="group relative cursor-pointer font-medium text-text-secondary transition-colors duration-micro hover:text-text-primary"
+                  className="group relative cursor-pointer font-semibold text-text-secondary transition-colors duration-micro hover:text-text-primary"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
@@ -67,9 +67,11 @@ export function Navbar() {
           <button
             className="p-2 text-text-primary md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Menu de navigation"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
       </div>
@@ -78,18 +80,21 @@ export function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
+            id="mobile-menu"
             className="glass-strong border-t border-gray-200 md:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+            role="navigation"
+            aria-label="Menu de navigation mobile"
           >
             <div className="container mx-auto flex flex-col gap-4 px-6 py-6">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="py-2 font-medium text-text-secondary transition-colors hover:text-text-primary"
+                  className="py-2 font-semibold text-text-secondary transition-colors hover:text-text-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

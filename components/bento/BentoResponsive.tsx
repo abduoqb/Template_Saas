@@ -36,7 +36,7 @@ export function BentoResponsive() {
                   <Icon size={32} className={device.color} />
                 </div>
               </div>
-              <div className="text-sm font-medium text-text-primary">{device.label}</div>
+              <div className="text-sm font-semibold text-text-primary">{device.label}</div>
               <div className="text-xs text-text-secondary mt-1">Optimisé</div>
             </motion.div>
           )

@@ -56,7 +56,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-2 block text-sm font-medium text-text-primary"
+                  className="mb-2 block text-sm font-semibold text-text-primary"
                 >
                   Nom complet
                 </label>
@@ -75,7 +75,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-text-primary"
+                  className="mb-2 block text-sm font-semibold text-text-primary"
                 >
                   Email
                 </label>
@@ -94,7 +94,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="mb-2 block text-sm font-medium text-text-primary"
+                  className="mb-2 block text-sm font-semibold text-text-primary"
                 >
                   Téléphone (optionnel)
                 </label>
@@ -112,7 +112,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-text-primary"
+                  className="mb-2 block text-sm font-semibold text-text-primary"
                 >
                   Message
                 </label>
@@ -188,7 +188,7 @@ export default function ContactPage() {
               <p className="mb-4 opacity-90">
                 Nous nous engageons à vous répondre sous 24h, du lundi au vendredi.
               </p>
-              <div className="flex items-center gap-2 text-sm font-medium">
+              <div className="flex items-center gap-2 text-sm font-semibold">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-white" />
                 Disponible maintenant
               </div>

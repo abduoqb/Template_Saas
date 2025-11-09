@@ -29,7 +29,7 @@ export default function OffrePage() {
             >
               <div className="inline-flex items-center gap-2 rounded-full border border-primary-blue/20 bg-primary-blue/5 px-4 py-2 mb-6">
                 <Gift className="h-4 w-4 text-primary-blue" />
-                <span className="text-sm font-medium text-text-primary">
+                <span className="text-sm font-semibold text-text-primary">
                   Offres Premium 2025
                 </span>
               </div>

@@ -15,9 +15,9 @@ const config: Config = {
         },
         text: {
           primary: '#1a1a2e',
-          secondary: 'rgba(26, 26, 46, 0.7)',
-          tertiary: 'rgba(26, 26, 46, 0.6)',
-          muted: 'rgba(26, 26, 46, 0.5)',
+          secondary: 'rgba(26, 26, 46, 0.75)', // Improved contrast for WCAG AA
+          tertiary: 'rgba(26, 26, 46, 0.65)',
+          muted: 'rgba(26, 26, 46, 0.55)',
         },
         grid: {
           light: 'rgba(0, 0, 0, 0.03)',

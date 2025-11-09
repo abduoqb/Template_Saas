@@ -33,7 +33,7 @@ export function BentoSpeed() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
           >
-            <div className="text-xs font-medium text-text-secondary mb-1">{vital.label}</div>
+            <div className="text-xs font-semibold text-text-secondary mb-1">{vital.label}</div>
             <div className={`text-2xl font-bold ${vital.color}`}>{vital.value}</div>
             <div className="text-xs text-text-secondary mt-1">✓ Excellent</div>
           </motion.div>

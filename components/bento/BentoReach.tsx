@@ -27,7 +27,7 @@ export function BentoReach() {
         >
           <div className="flex items-center gap-3">
             <MapPin size={20} className="text-purple-500" />
-            <span className="font-medium text-text-primary">Votre ville</span>
+            <span className="font-semibold text-text-primary">Votre ville</span>
           </div>
           <span className="text-2xl">→</span>
         </motion.div>
@@ -41,7 +41,7 @@ export function BentoReach() {
         >
           <div className="flex items-center gap-3">
             <MapPin size={20} className="text-purple-500" />
-            <span className="font-medium text-text-primary">Votre région</span>
+            <span className="font-semibold text-text-primary">Votre région</span>
           </div>
           <span className="text-2xl">→</span>
         </motion.div>

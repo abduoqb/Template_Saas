@@ -33,7 +33,7 @@ export function BentoSecurity() {
               <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600">
                 <Icon size={18} className="text-white" />
               </div>
-              <span className="text-sm font-medium text-text-primary">{feature.label}</span>
+              <span className="text-sm font-semibold text-text-primary">{feature.label}</span>
               <CheckCircle size={16} className="text-green-500 ml-auto" />
             </motion.div>
           )

@@ -78,27 +78,22 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Screen reader only utility - hides content visually but keeps it accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* Focus visible styles */
 *:focus-visible {
   outline: 2px solid #5a67d8;
   outline-offset: 2px;
   border-radius: 4px;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #5a67d8 0%, #9f7aea 100%);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #4a57c8 0%, #8f6a9a 100%);
 }

@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import { Github, Dribbble, Twitter, Linkedin, Send } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { FOOTER_LINKS } from '@/lib/constants'
@@ -31,16 +28,21 @@ export function Footer() {
             <div className="flex gap-3">
               {['github', 'dribbble', 'twitter', 'linkedin'].map((social) => {
                 const Icon = socialIcons[social as keyof typeof socialIcons]
+                const socialLabels = {
+                  github: 'GitHub',
+                  dribbble: 'Dribbble',
+                  twitter: 'Twitter',
+                  linkedin: 'LinkedIn'
+                }
                 return (
-                  <motion.a
+                  <a
                     key={social}
                     href={`#${social}`}
-                    className="w-10 h-10 rounded-full glass flex items-center justify-center text-text-secondary hover:text-primary-blue transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                    aria-label={`Suivez-nous sur ${socialLabels[social as keyof typeof socialLabels]}`}
+                    className="w-10 h-10 rounded-full glass flex items-center justify-center text-text-secondary hover:text-primary-blue transition-all duration-micro hover:scale-110 active:scale-95"
                   >
-                    <Icon size={18} />
-                  </motion.a>
+                    <Icon size={18} aria-hidden="true" />
+                  </a>
                 )
               })}
             </div>
@@ -122,13 +124,19 @@ export function Footer() {
             Recevez les dernières actualités et conseils directement dans votre boîte mail
           </p>
           <form className="flex gap-2">
+            <label htmlFor="newsletter-email" className="sr-only">
+              Adresse email pour la newsletter
+            </label>
             <input
               type="email"
+              id="newsletter-email"
+              name="email"
               placeholder="votre@email.com"
+              aria-label="Adresse email pour la newsletter"
               className="flex-1 px-4 py-2 rounded-button bg-gray-100 border border-gray-200 text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-all text-sm"
             />
             <Button variant="primary" size="md" type="submit">
-              <Send size={16} />
+              <Send size={16} aria-hidden="true" />
               S&apos;inscrire
             </Button>
           </form>

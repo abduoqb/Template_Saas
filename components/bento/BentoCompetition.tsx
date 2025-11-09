@@ -60,7 +60,7 @@ export function BentoCompetition() {
             >
               73%
             </motion.div>
-            <p className="text-base font-medium text-white/90 md:text-lg">
+            <p className="text-base font-semibold text-white/90 md:text-lg">
               des clients jugent votre crédibilité sur votre site web
             </p>
             <div className="mt-3 flex items-center justify-center gap-2 text-sm text-white/80">
